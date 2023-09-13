@@ -1,4 +1,5 @@
-import { OrganizationSwitcher, SignedIn, SignOutButton } from "@clerk/nextjs";
+import { OrganizationSwitcher, UserButton, SignedIn, SignOutButton } from "@clerk/nextjs";
+import { User } from "@clerk/nextjs/dist/types/server";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,7 +10,6 @@ function Topbar() {
                 <Image src='/assets/logo.svg' alt='logo' width={28} height={28} />
                 <p className='text-heading3-bold text-light-1 max-xs:hidden'>Threads</p>
             </Link>
-
             <div className='flex items-center gap-1'>
                 <div className='block md:hidden'>
                     <SignedIn>
@@ -28,7 +28,7 @@ function Topbar() {
                 <OrganizationSwitcher
                     appearance={{
                         elements: {
-                            organizationSwitcherTrigger: "mb-48",
+                            organizationSwitcherTrigger: "py-2 px-4  ",
                         },
                     }}
                 />
