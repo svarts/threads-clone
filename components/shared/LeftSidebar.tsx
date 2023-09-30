@@ -6,7 +6,7 @@ function LeftSidebar(){
             <div className="flex w-full flex-1 flex-col gap-6 px-6">
                 {sidebarLinks.map((link) => (
                     <div className="text-white">
-                        link
+                        Link
                     </div>
                 ))}
             </div>

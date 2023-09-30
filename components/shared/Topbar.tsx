@@ -1,4 +1,4 @@
-import { OrganizationSwitcher, UserButton, SignedIn, SignOutButton } from "@clerk/nextjs";
+import { OrganizationSwitcher, SignedIn, SignOutButton, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -12,7 +12,6 @@ function Topbar() {
             <div className='flex items-center gap-1'>
                 <div className='block md:hidden'>
                     <SignedIn>
-                    <UserButton afterSignOutUrl="/"/>
                         <SignOutButton>
                             <div className='flex cursor-pointer'>
                                 <Image
@@ -28,7 +27,7 @@ function Topbar() {
                 <OrganizationSwitcher
                     appearance={{
                         elements: {
-                            organizationSwitcherTrigger: "py-2 px-4",
+                            organizationSwitcherTrigger: "py-2 px-4 text-white",
                         },
                     }}
                 />
